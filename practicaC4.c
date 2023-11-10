@@ -2,7 +2,7 @@
 #include <stdlib.h>
 #include <math.h>
 
-#define N 512 // cambiar a 512
+#define N 512
 //Variables exercicis
 float V1[N];
 float V2[N];
@@ -185,99 +185,99 @@ int Jacobi( float M[N][N] , float vect[N], float vectres[N], unsigned int iter )
 int main(){
 	InitData();
 	//EXERCICI A
-	//printf("V1 del 0 al 9 i del 256 al 265:\n");
-	//PrintVect(V1, 0, 10);
-	//PrintVect(V1, 256, 10);
+	printf("V1 del 0 al 9 i del 256 al 265:\n");
+	PrintVect(V1, 0, 10);
+	PrintVect(V1, 256, 10);
 	
-	//printf("V2 del 0 al 9 i del 256 al 265:\n");
-	//PrintVect(V2, 0, 10);
-	//PrintVect(V2, 256, 10);
+	printf("V2 del 0 al 9 i del 256 al 265:\n");
+	PrintVect(V2, 0, 10);
+	PrintVect(V2, 256, 10);
 	
-	//printf("V3 del 0 al 9 i del 256 al 265:\n");
-	//PrintVect(V3, 0, 10);
-	//PrintVect(V3, 256, 10);
+	printf("V3 del 0 al 9 i del 256 al 265:\n");
+	PrintVect(V3, 0, 10);
+	PrintVect(V3, 256, 10);
 	
 
 	//EXERCICI B
-	//printf("Mat fila 0 i fila 100 del 0 al 9:\n");
-	//PrintRow(Mat, 0, 0, 10);
-	//PrintRow(Mat, 100, 0, 10);
+	printf("Mat fila 0 i fila 100 del 0 al 9:\n");
+	PrintRow(Mat, 0, 0, 10);
+	PrintRow(Mat, 100, 0, 10);
 	
 	
 
 	//EXERCICI C
-	//printf("MatDD fila 0 del 0 al 9 i fila 100 del 95 al 104:\n");
-	//PrintRow(MatDD, 0, 0, 9);
-        //PrintRow(MatDD, 100, 95, 10);
+	printf("MatDD fila 0 del 0 al 9 i fila 100 del 95 al 104:\n");
+	PrintRow(MatDD, 0, 0, 9);
+        PrintRow(MatDD, 100, 95, 10);
 
 
 	
 	//EXERCICI D
 	//D_MAT
 
-	//float x = Infininorm(Mat);
-	//printf("Infininorma de Mat = %f\n", x);
-	//float y = Onenorm(Mat);
-	//printf("Norma ú de Mat = %f\n", y);
-	//float z = NormFrobenius(Mat);
-	//printf("Norma de Frobenius de Mat = %f\n", z);
-	//int a = DiagonalDom(Mat);
-	//if ( a == 1 ){ printf("La matriu Mat és diagonal dominant\n"); }
-	//if ( a == 0 ){  printf("La matriu Mat no és diagonal dominant\n"); }
+	float x = Infininorm(Mat);
+	printf("Infininorma de Mat = %f\n", x);
+	float y = Onenorm(Mat);
+	printf("Norma ú de Mat = %f\n", y);
+	float z = NormFrobenius(Mat);
+	printf("Norma de Frobenius de Mat = %f\n", z);
+	int a = DiagonalDom(Mat);
+	if ( a == 1 ){ printf("La matriu Mat és diagonal dominant\n"); }
+	if ( a == 0 ){  printf("La matriu Mat no és diagonal dominant\n"); }
 	
 
 	//D_MATDD
 
-	//float r = Infininorm(MatDD);
-	//printf("Infininorma de MatDD = %f\n", r);
-        //float s = Onenorm(MatDD);
-	//printf("Norma ú de MatDD = %f\n", s);
-        //float t = NormFrobenius(MatDD);
-	//printf("Norma de Frobenius de MatDD = %f\n", t);
-        //int b = DiagonalDom(MatDD);
-        //if ( b = 1 ){ printf("La matriu MatDD és diagonal dominant\n"); }
-        //if ( b = 0 ){  printf("La matriu MatDD no és diagonal dominant\n"); }
+	float r = Infininorm(MatDD);
+	printf("Infininorma de MatDD = %f\n", r);
+        float s = Onenorm(MatDD);
+	printf("Norma ú de MatDD = %f\n", s);
+        float t = NormFrobenius(MatDD);
+	printf("Norma de Frobenius de MatDD = %f\n", t);
+        int b = DiagonalDom(MatDD);
+        if ( b = 1 ){ printf("La matriu MatDD és diagonal dominant\n"); }
+        if ( b = 0 ){  printf("La matriu MatDD no és diagonal dominant\n"); }
 	
 
 	//EXERCICI E
-	//float u = Scalar(V1, V2);
-        //printf("Escalar <V1,V2> = %f ", u);
-	//float v = Scalar(V1, V3);
-        //printf("Escalar <V1,V3> =%f ", v);
-	//float w = Scalar(V2, V3);
-        //printf("Escalar <V2,V3> = %f \n", w);
+	float u = Scalar(V1, V2);
+        printf("Escalar <V1,V2> = %f ", u);
+	float v = Scalar(V1, V3);
+        printf("Escalar <V1,V3> =%f ", v);
+	float w = Scalar(V2, V3);
+        printf("Escalar <V2,V3> = %f \n", w);
 
 
 	//EXERCICI F
-	//float x = Magnitude(V1);
-	//float y = Magnitude(V2);
-	//float z = Magnitude(V3);
-        //printf("Magnitud V1,V2 i V3 = %f %f %f\n", x, y, z);
+	float x = Magnitude(V1);
+	float y = Magnitude(V2);
+	float z = Magnitude(V3);
+        printf("Magnitud V1,V2 i V3 = %f %f %f\n", x, y, z);
 
 
 	//EXERCICI G
-	//printf("V1 i V2 ");
-	//Ortogonal(V1, V2);
-	//printf("V1 i V3 ");
-	//Ortogonal(V1, V3);
-	//printf("V2 i V3 ");
-	//Ortogonal(V2, V3);
+	printf("V1 i V2 ");
+	Ortogonal(V1, V2);
+	printf("V1 i V3 ");
+	Ortogonal(V1, V3);
+	printf("V2 i V3 ");
+	Ortogonal(V2, V3);
 
 	//EXERCICI H
-	//MultEscalar(V3, V5, 2);
-	//printf("Els elements 0 al 9 i 256 al 265 del resultat de multiplicar V3x2.0 són:\n");
-	//PrintVect(V5, 0, 10);
-	//PrintVect(V5, 256, 10);
+	MultEscalar(V3, V5, 2);
+	printf("Els elements 0 al 9 i 256 al 265 del resultat de multiplicar V3x2.0 són:\n");
+	PrintVect(V5, 0, 10);
+	PrintVect(V5, 256, 10);
 	
 	
 	
 	//EXERCICI I
-	//Projection(V2, V3, V6);
-	//printf("Els elements 0 a 9 del resultat de la projecció de V2 sobre V3 són:\n");
-	//PrintVect(V6, 0, 10);
-	//Projection(V1, V2, V7);
-	//printf("Els elements 0 a 9 del resultat de la projecció de V1 sobre V2 són:\n");
-        //PrintVect(V7, 0, 10);
+	Projection(V2, V3, V6);
+	printf("Els elements 0 a 9 del resultat de la projecció de V2 sobre V3 són:\n");
+	PrintVect(V6, 0, 10);
+	Projection(V1, V2, V7);
+	printf("Els elements 0 a 9 del resultat de la projecció de V1 sobre V2 són:\n");
+        PrintVect(V7, 0, 10);
 
 
 	//EXERCICI J
